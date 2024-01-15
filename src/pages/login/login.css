@@ -1,0 +1,60 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  /* background: url("https://www.transparenttextures.com/patterns/lined-paper-2.png"); */
+  /* background: url("https://www.transparenttextures.com/patterns/project-paper.png"); */
+    /* background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png"); */
+    background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+    font-family: 'Lora', serif;
+    font-size: 22px;
+}
+.loginTitle{
+    font-size: 40px;
+}
+.loginForm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+.loginForm > label{
+    margin: 20px 0 10px 0;
+}
+.loginInput{
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+}
+.loginButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 30px 0; */
+}
+.loginButtons > button{
+    margin: 30px 0;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.loginButton{
+    background-color: teal;
+    color: white;
+}
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: rgb(113, 183, 183);
+}
+.loginRegisterButton{
+    background-color: rgb(92, 92, 92);
+    color: white;  
+}
