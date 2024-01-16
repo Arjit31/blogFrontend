@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("https://backblog-qx9z.onrender.com/api/posts"+search);
+      const res = await axios.get("/posts"+search);
       setPosts(res.data);
       // console.log(res);
     };
