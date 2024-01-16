@@ -18,7 +18,7 @@ export default function Register() {
         email,
         password
       });
-      res.data && window.location.replace("https://frontblog1.onrender.com/login");
+      res.data && window.location.replace("/login");
     } catch (error) {
       setError(true);
       // console.log(error);
