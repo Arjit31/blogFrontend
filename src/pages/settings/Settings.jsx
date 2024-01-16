@@ -1,6 +1,6 @@
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 
@@ -45,6 +45,12 @@ try {
     }
   };
 
+useEffect(()=>{
+  setUsername(user.username);
+  setEmail(user.email);
+  setUsername(user.password);
+},[])
+  
   return (
     <div className="settings">
       <div className="settingsWrapper">
