@@ -34,7 +34,7 @@ export default function Write() {
       console.log(newPost);
       const res = await axios.post("https://backblog-qx9z.onrender.com/api/posts", newPost);
       // console.log(res);
-      window.location.replace("/post/" + res.data._id);
+      window.location.replace("/");
     } catch (error) {
       console.log(error);
     }
