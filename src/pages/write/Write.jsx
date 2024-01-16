@@ -27,12 +27,12 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = fileName;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://backblog-qx9z.onrender.com/api/upload", data);
       } catch (error) {}
     }
     try {
       console.log(newPost);
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post("https://backblog-qx9z.onrender.com/api/posts", newPost);
       // console.log(res);
       window.location.replace("/post/" + res.data._id);
     } catch (error) {
@@ -43,7 +43,7 @@ export default function Write() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("/categories");
+        const response = await axios.get("https://backblog-qx9z.onrender.com/api/categories");
         setCategories(response.data);
       } catch (error) {
         console.log(error);
