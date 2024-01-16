@@ -18,7 +18,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete("/posts/" + path, {
+      await axios.delete("https://backblog-qx9z.onrender.com/api/posts/" + path, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -37,18 +37,18 @@ export default function SinglePost() {
       data.append("file", file);
       updatePost.photo = fileName;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://backblog-qx9z.onrender.com/api/upload", data);
       } catch (error) {}
     }
     try {
-      await axios.put("/posts/" + path, updatePost);
+      await axios.put("https://backblog-qx9z.onrender.com/api/posts/" + path, updatePost);
       // window.location.reload();
       setUpdateMode(false);
     } catch (error) {}
   };
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get("https://backblog-qx9z.onrender.com/api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
