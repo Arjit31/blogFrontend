@@ -29,13 +29,13 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = fileName;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://backblog-qx9z.onrender.com/api/upload", data);
     } catch (error) {
     }
 }
 try {
     console.log(updatedUser);
-    const res = await axios.put("/users/" + user._id, updatedUser);
+    const res = await axios.put("https://backblog-qx9z.onrender.com/api/users/" + user._id, updatedUser);
     dispatch({type:"UPDATE_SUCCESS", payload: res.data});
     setSuccess(true);
     // console.log(res);
