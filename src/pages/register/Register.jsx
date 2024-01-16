@@ -18,7 +18,7 @@ export default function Register() {
         email,
         password
       });
-      res.data && window.location.replace("https://backblog-qx9z.onrender.com/api/login");
+      res.data && window.location.replace("/login");
     } catch (error) {
       setError(true);
       // console.log(error);
