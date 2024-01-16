@@ -41,5 +41,5 @@
   "devDependencies": {
     "react-router-dom": "^6.21.1"
   },
-  "proxy": "https://backblog-qx9z.onrender.com/api"
+  "proxy": "https://backblog-qx9z.onrender.com/api/"
 }
